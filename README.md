@@ -2,7 +2,7 @@
 比较require和import这两种常见js模块化之间的关系和区别
 
 
-标签（空格分隔）： 前端 js Nodejs
+标签： 前端、 js、 Nodejs、 模块化
 
 
 ----------
