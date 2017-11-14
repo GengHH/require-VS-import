@@ -14,7 +14,7 @@
 
 > * 模块化规范：即为 JavaScript提供一种模块编写、模块依赖和模块运行的方案。谁让最初的 JavaScript 是那么的裸奔呢——全局变量就是它的模块化规范。
 
-##地位不同
+## 地位不同
 require/exports 出生在野生规范当中，什么叫做野生规范？即这些规范是 JavaScript 社区中的开发者自己草拟的规则，得到了大家的承认或者广泛的应用。比如 CommonJS、AMD、CMD 等等。import/export 则是名门正派。TC39 制定的新的 ECMAScript 版本，即 ES6（ES2015）中包含进来
 
 ##出现的时间不同
@@ -26,11 +26,11 @@ CommonJS 作为 Node.js 的规范，一直沿用至今。由于 npm 上 CommonJS
 
 >*这也就是为什么前面说 require/exports 是必要且必须的。因为事实是，目前你编写的 import/export 最终都是编译为 require/exports 来执行的。*
 
-###require/exports 的用法只有以下**三种**简单的写法：
+### require/exports 的用法只有以下**三种**简单的写法：
 >const fs = require('fs')
 exports.fs = fs
 module.exports = fs
-###而 import/export 的写法就**多种**多样：
+### 而 import/export 的写法就**多种**多样：
 >import fs from 'fs'
 import {default as fs} from 'fs'
 import * as fs from 'fs'
@@ -44,7 +44,7 @@ export function readFile
 export {readFile, read}
 export * from 'fs'
 
-##require/exports 和 import/export 本质上的差别
+## require/exports 和 import/export 本质上的差别
 形式上看起来五花八门，但本质上：
 
     1.CommonJS 还是 ES6 Module输出都可以看成是一个具备多个属性或者方法的对象；
