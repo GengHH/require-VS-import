@@ -8,9 +8,9 @@
 
 
 ---原文信息：
-作者：寸志 
-链接：https://www.zhihu.com/question/56820346/answer/150724784 
-来源：知乎 
+   作者：寸志 
+   链接：https://www.zhihu.com/question/56820346/answer/150724784 
+   来源：知乎 
 
 > * 模块化规范：即为 JavaScript提供一种模块编写、模块依赖和模块运行的方案。谁让最初的 JavaScript 是那么的裸奔呢——全局变量就是它的模块化规范。
 
@@ -28,21 +28,21 @@ CommonJS 作为 Node.js 的规范，一直沿用至今。由于 npm 上 CommonJS
 
 ### require/exports 的用法只有以下**三种**简单的写法：
 >const fs = require('fs')
-exports.fs = fs
-module.exports = fs
+>exports.fs = fs
+>module.exports = fs
 ### 而 import/export 的写法就**多种**多样：
 >import fs from 'fs'
-import {default as fs} from 'fs'
-import * as fs from 'fs'
-import {readFile} from 'fs'
-import {readFile as read} from 'fs'
-import fs, {readFile} from 'fs'
+>import {default as fs} from 'fs'
+>import * as fs from 'fs'
+>import {readFile} from 'fs'
+>import {readFile as read} from 'fs'
+>import fs, {readFile} from 'fs'
 
 >export default fs
-export const fs
-export function readFile
-export {readFile, read}
-export * from 'fs'
+>export const fs
+>export function readFile
+>export {readFile, read}
+>export * from 'fs'
 
 ## require/exports 和 import/export 本质上的差别
 形式上看起来五花八门，但本质上：
@@ -51,7 +51,7 @@ export * from 'fs'
 
     2.default 是 ES6 Module 所独有的关键字，export default fs 输出默认的接口对象，import fs from 'fs' 可直接导入这个对象；
 
-     3.ES6 Module 中导入模块的属性或者方法是强绑定的，包括基础类型； 而 CommonJS 则是普通的值传递或者引用传递。
+    3.ES6 Module 中导入模块的属性或者方法是强绑定的，包括基础类型； 而 CommonJS 则是普通的值传递或者引用传递。
 
 作者 @XRW-6    
 2017 年 11月 14日   
